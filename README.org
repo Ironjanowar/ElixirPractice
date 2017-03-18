@@ -1,0 +1,3 @@
+* ELIXIR PRACTICE
+
+Little Elixir exercises done in [[https://www.dailydrip.com/topics/elixir][this]] course
