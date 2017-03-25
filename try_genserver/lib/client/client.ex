@@ -3,6 +3,10 @@ defmodule Client do
     GenServer.call(:fridge, {:add, food})
   end
 
+  def add_async(food) do
+    GenServer.cast(:fridge, {:add_async, food})
+  end
+
   def show do
     GenServer.call(:fridge, :show)
   end

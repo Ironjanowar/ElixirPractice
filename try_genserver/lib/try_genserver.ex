@@ -10,11 +10,15 @@ defmodule TryGenserver do
   end
 
   # Server
+  def handle_cast({:add_async, food}, state) do
+    {:noreply, [food | state]}
+  end
+
   def handle_call({:add, food}, _, state) do
     {:reply, {:added, food}, [food | state]}
   end
 
-  def handle_call(:drop, _, state) do
+  def handle_call(:drop, _, _) do
     {:reply, "The base had been dropped", []}
   end
 
